@@ -1,0 +1,9 @@
+.checkbox-cont {
+    display: flex;
+    gap: 5px;
+}
+
+.checkbox-cont input {
+    accent-color: var(--primary-color);
+    
+}

@@ -1,0 +1,14 @@
+.login-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 30px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(128, 128, 128, 0.3); /* gray transparent */
+  backdrop-filter: blur(8px);
+}
