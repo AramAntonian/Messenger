@@ -101,7 +101,7 @@ export class ChatGateway implements OnGatewayConnection, OnGatewayDisconnect {
     try {
       const newChat = await this.chatService.addChat(chat);
       if (clients.length) {
-        this.server.to(clients).emit('chats', newChat);
+        this.server.to(clients).emit('chats', [newChat]);
       }
     } catch {
       throw new HttpException('Internal server error', 500);

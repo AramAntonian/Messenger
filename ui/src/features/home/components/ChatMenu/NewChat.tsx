@@ -6,7 +6,6 @@ import type { UserDto } from "../../dto/UserDto";
 import { logout } from "../../../../service/logout";
 import { WebSocketContext } from "../../../../contexts/WebSocketContext";
 
-
 function NewChat() {
   const socket = useContext(WebSocketContext);
   const [open, setOpen] = useState(false);
@@ -33,6 +32,7 @@ function NewChat() {
     participants.push(me.username);
     const data = { name, users: participants };
     socket.emit("newChat", data);
+    handleClose();
   }
 
   return (

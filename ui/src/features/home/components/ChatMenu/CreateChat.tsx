@@ -36,6 +36,7 @@ function CreateChat({ socket }: CreateChat) {
     participants.push(me.username);
     const data = { name, users: participants };
     socket.emit("newChat", data);
+    handleClose()
   }
 
   return (

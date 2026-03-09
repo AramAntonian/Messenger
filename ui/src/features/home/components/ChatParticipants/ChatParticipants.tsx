@@ -12,12 +12,7 @@ function ChatParticipants({ users }: ChatParticipantsProps) {
     <div className="chat-participants-cont">
       <div className="chat-participants">Chat Participants</div>
       <div className="chat-users">
-        {users &&
-          users.map((el: UserDto, idx: number) => (
-            <div key={idx}>
-              <ChatUser user={el} />
-            </div>
-          ))}
+        {users && users.map((el: UserDto, idx: number) => <ChatUser user={el} key={idx} />)}
       </div>
     </div>
   );
